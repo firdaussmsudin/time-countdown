@@ -1,0 +1,211 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    "title"
+    "time-container"
+    "button-container";
+  margin: 0 10% 0 10%;
+  box-shadow: 0 10px 10px 5px rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.title {
+  grid-area: title;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3vw;
+  color: #f2cfd3;
+  text-align: center;
+}
+
+.input-title {
+  font-size: 3vw;
+  outline: none;
+  border: 0;
+  margin-left: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  width: 30vw;
+}
+
+.input-time {
+  outline: none;
+  border: 0;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: rgb(0, 0, 0, 0);
+  color: white;
+  text-align: center;
+  width: 1em;
+  font-size: 8vw;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.time-container {
+  grid-area: time-container;
+  display: grid;
+  grid-template-areas:
+    "hour-1 hour-2 colon-1 minute-1 minute-2 colon-2 second-1 second-2"
+    "hour-word hour-word colon-1 minute-word minute-word colon-2 second-word second-word";
+  background-color: #e6434c;
+  grid-gap: 10px;
+  padding: 5% 5% 2% 5%;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px 5px rgb(0, 0, 0, 0.2);
+}
+
+#hour-1 {
+  grid-area: hour-1;
+}
+
+#hour-2 {
+  grid-area: hour-2;
+}
+
+#colon-1 {
+  grid-area: colon-1;
+}
+
+#colon-2 {
+  grid-area: colon-2;
+}
+
+#minute-1 {
+  grid-area: minute-1;
+}
+
+#minute-2 {
+  grid-area: minute-2;
+}
+
+#second-1 {
+  grid-area: second-1;
+}
+
+#second-2 {
+  grid-area: second-2;
+}
+
+.hour-word {
+  grid-area: hour-word;
+}
+
+.minute-word {
+  grid-area: minute-word;
+}
+
+.second-word {
+  grid-area: second-word;
+}
+
+.hour-display,
+.minute-display,
+.second-display {
+  background-color: #dc2d44;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.colon {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  align-self: center;
+  position: relative;
+  bottom: 30px;
+}
+
+.hour-word,
+.minute-word,
+.second-word {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.button-container {
+  grid-area: button-container;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button-container i {
+  font-size: 50px;
+  margin: 20px;
+  color: #e6434c;
+}
+
+.button-container .fa-solid {
+  font-weight: 400;
+}
+
+.button-container .fa-solid:hover {
+  font-weight: 900;
+}
+
+@media screen and (max-width: 885px) {
+  .input-title{
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .colon{
+    display: none;
+  }
+  .time-container {
+    grid-area: time-container;
+    display: grid;
+    grid-template-areas:
+      "hour-1 hour-2 hour-word"
+      "minute-1 minute-2 minute-word"
+      "second-1 second-2 second-word";
+    grid-gap: 10px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 10px 10px 5px rgb(0, 0, 0, 0.2); 
+    margin: 20px;
+  }
+
+  .title{
+    font-size: 5vw;
+  }
+
+  .input-title{
+    font-size: 5vw;
+  }
+
+  .hour-word,
+.minute-word,
+.second-word {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.button-container i {
+  font-size: 10vw;
+  margin: 2vw;
+  color: #e6434c;
+}
+
+.container{
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+
+}
